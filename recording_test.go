@@ -28,6 +28,7 @@ package gomusicbrainz
 import (
 	"reflect"
 	"testing"
+	"time"
 )
 
 func TestSearchRecording(t *testing.T) {
@@ -49,6 +50,36 @@ func TestSearchRecording(t *testing.T) {
 								ID:       "695e75b5-c6db-43ee-abeb-2f3e50d96c3e",
 								Name:     "Imperiet",
 								SortName: "Imperiet",
+							},
+						},
+					},
+				},
+				Releases: []Release{
+					Release{
+						ID: "ae050d13-7f86-495e-9918-10d8c0ac58e8",
+						Title: "Fred",
+						Status: "Official",
+						ReleaseGroup: ReleaseGroup{
+							ID: "d0e20525-9c3b-3f68-a130-bfca696526f2",
+							Type: "Single",
+							PrimaryType: "Single",
+						},
+						Date: BrainzTime{
+							Time:     time.Date(1984, 12, 1, 0, 0, 0, 0, time.UTC),
+							Accuracy: Day,
+						},
+						CountryCode: "SE",
+						Mediums: []*Medium{
+							{
+								Position: 1,
+								Format: "7\" Vinyl",
+								Tracks: []*Track {
+									{
+										ID: "e111dc12-8ff7-399f-94c9-32fc493a7fc9",
+										Number: "A",
+										Length: 473000,
+									},
+								},
 							},
 						},
 					},
